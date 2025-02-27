@@ -1,0 +1,9 @@
+services:
+  backend:
+    container_name: backend_api
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      - ENV=production
+    restart: on-failure
