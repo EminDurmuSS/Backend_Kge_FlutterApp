@@ -1,0 +1,9 @@
+python -m http.server 3000 
+uvicorn main:app --reload
+
+# python -m uvicorn app.main:main --reload
+
+# flutter run -d chrome --web-browser-flag="--disable-web-security"
+
+uvicorn main:app --reload > output.log 2>&1
+uvicorn main:app --reload 2>&1 | tee output.log
