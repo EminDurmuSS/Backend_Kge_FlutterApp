@@ -1,9 +1,12 @@
 services:
   backend:
-    container_name: backend_api
     build:
-      context: ./backend
+      context: .
       dockerfile: Dockerfile
+    env_file:
+      - .env
     environment:
       - ENV=production
+    ports:
+      - "8000:8000"
     restart: on-failure
